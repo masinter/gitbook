@@ -1,0 +1,294 @@
+Stephen H.Kaisler, D.Sc.
+
+## Objective: Install Interlisp – Medley Version on Windows 10 Pro.
+
+Note: I was unable to install Interlisp - Medley Version on Windows 10 Home, despite repeated attempts.
+
+## Requirements:
+1. WSL2 from Microsoft
+2. An X server  - either VcXsrv from SourceForge or 410X from Microsoft.
+3. A version of Linux, such as Ubuntu 20.04 LTS or PengWin (both from Microsoft)
+
+Note: This is going to be a rather lengthy document, but the idea is to show you what you will see at each step of the process.
+
+You should only have to do Steps 1 through 11 once.
+
+### Step 1: Set up your WSL environment on your machine.
+
+An X Server is required to handle the graphic displays.
+We used VcXsrv, which can be downloaded from: https://sourceforge.net/projects/vcxsrv/.
+
+VcXsrv is an open-source display server for Microsoft Windows. It enables a user of the Windows operating system to run GUI programs designed for the X Window System.
+
+a. Unzip VcXsrv which will create a directory and extract the files in c:\Program Files\VcXsrv
+Run the installer: vcxsrv.exe
+
+On your desktop, you should see an icon:
+
+ 
+
+This will be your launcher for VcXsrv. There will also be an entry in your Start Menu.
+
+Check the System requirements. You may have to update Windows 10 Pro to version 20h2 or later.
+
+Note: I found that joining Windows Insider Preview program to get early releases of forthcoming updates was most likely beneficial. It costs nothing to join, but you do need to allow optional diagnostics to run so Microsoft can get feedback. Some versions may still have bugs in them.
+
+I downloaded Windows 10 Pro, Version 21382.
+
+b. Download Ubuntu 20.04 LTS  from Microsoft and save it in a directory.
+I call my directory Applications.
+
+https://www.microsoft.com/en-us/p/ubuntu-2004-lts/9n6svws3rx71?rtc=1&activetab=pivot:overviewtab
+ When you get it, it install Ubuntu 20.04 LTS on your machine.
+c. Open PowerShell as Administrator and run:
+PowerShell
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+This will activate the virtual machine to support Ubuntu.
+d. Restart your machine to complete the WSL install and update to WSL 2.
+To run Ubuntu LTS 20.04, go to the Start Menu as shown:
+
+ 
+
+e. Click on the Ubuntu 20.04 LTS entry.
+
+You should see something like this:
+
+ 
+
+I specified my username as “Steve” for Ubuntu, then specified a password, when prompted.
+Note: This user name and password probably should be different from your normal login id and password for Windows.
+
+Ubuntu defines a (hidden) directory accessed as /home. Within it, it creates a personal directory for your username as show above.
+
+ 
+
+Step 2: Consider checking for Updates to WSL every so often
+
+Remember! When running commands to use “sudo <command>” so it runs as administrator. When you select items off of the Start Menu, right click and select the option “Run as Administrator”, otherwise, even if you are listed as the administrator in User Accounts on the Control Panel, Windows still balks.
+
+a. Note: Running “sudo apt update” every so often. This will tell you what packages could be updated.
+b.Then to update your system, run “sudo apt upgrade”.
+
+You should see a lot of loading and unpacking information. This could take quite a while depending on the number of packages to be updated.
+
+Answer “Y” to continue with the upgrade.
+
+ 
+
+You may type “help” at the prompt to see a list of commands available to you.
+
+Updating Your Windows 10 System
+You may also want to ensure that your Windows 10 system is up to date.
+
+Go to PC Setting>Update  & Security>Windows Update  and click on Check for Updates.
+Windows will check for any updates and list them for you. You choose to install them immediately (which will require a restart of your computer) or defer them until later.
+
+c. You can see what drives are mounted for your system.
+
+Type ls /mnt to see the drives.
+
+ 
+
+The laptop I running Interlisp has one disk, but has several partitions. wslg is the current version of the Windows System for Linux. This is the one you need to have installed.
+
+Transfer to you home directory: $ cd /home/steve
+
+Step 3: Install CLANG, a C language compiler and runtime system.
+
+Clang is a compiler front end for the C, C++, Objective-C and Objective-C++ programming languages, as well as the OpenMP,[6] OpenCL, RenderScript, CUDA and HIP frameworks. It uses the LLVM compiler infrastructure as its back end and has been part of the LLVM release cycle since LLVM 2.6.
+
+Type “sudo apt install clang” into your Ubuntu window.
+
+ 
+
+This part tells you what packages will be installed.
+Answer “Y” to continue with the installation.
+There is a lot of unpacking, selecting, and installing of packages.
+
+Step 4: Install make from GitHub
+Type “sudo apt install make”.
+ 
+
+Note that it detected my processor type and installed the proper files for the processor.
+
+Step 5: Install x11dev
+Libx11-dev is a client-side library for using an X11 Server.
+
+Type “sudo apt install libx11-dev”
+
+ 
+
+Answer “Y” to continue with the installation.
+Again, more unpacking, selecting, and installing
+Note: These packages are not installed in your home directory, but in Ubuntu’s directories.
+
+-------------------------------- xfce4 warning!!--------------------------------------------------------
+I installed this package and tried to run it, but I kept getting errors and segmentation faults!!
+I am not sure what this is due to, but am investigating further.
+
+You also probably want to install xfce4 and its goodies package:
+skaisler1@DESKTOP-xxxxx: sudo apt install xfce4 xfce4-goodies
+
+During this install, you’ll be prompted to choose a display manager. I have chosen lightdm.
+
+Note that this will take quite awhile, So, get yourself a good cup of coffee
+ or a beer.
+
+Step 6: Enable DPI Scaling for VcXsrv
+
+Once installed, you’ll want to enable High DPI scaling for VcXsrv in Windows.
+•	Navigate to C:\Program Files\VcXsrv
+•	Right-click xlaunch.exe and go to Compatibility
+•	Click Change high DPI settings and choose Override high DPI scaling behavior. Ensure Application is in the dropdown.
+Step 7: Allow Inbound Traffic from windows to VcXsrc
+You should have some sort of firewall running to protect your system when connected to the internet. However, as setup, traffic to VcXsrv is treated as external traffic. This seems to prevent Interlisp (and, perhaps, other applications) from running correctly.
+Open Windows Defender Firewall with Advanced Security and add two new Inbound Rules as follows:
+•	Type: Program
+•	Program path: %ProgramFiles%\VcXsrv\vcxsrv.exe for VcXsrv.
+•	Allow the connection
+•	Profile: Domain, Private
+•	Name: vcxsrv 
+Step 8: Install git
+
+Type “sudo apt install git”
+<This reads the package list, builds the dependency tree and state information and fetches additional packages and installs them.>
+
+In my case, since I updated my version of Ubuntu 20.04 LTS, git was already installed.
+ 
+
+Step 9: Install Maiko
+
+Maiko is the virtual machine that handles the Interlisp byte codes.
+We need to install it in our home directory, so transfer to you home directory!
+
+ 
+
+If you are curious, you can ‘cd to maiko/bin and do an ‘ls’ to see what is there.
+
+Now, time to build maiko. “makeright x” determines the machine type and invokes the proper files.
+Transfer to the maiko/bin directory.
+Type “sudo ./makeright x”
+
+ 
+
+Again, many calls to clang, but then it binds all the object modules together to create an executable as named at the bottom of the next screenshot.
+
+ 
+
+Step 10: Install Medley
+
+Now, go back to you home directory and get Medley:
+
+ 
+
+What you see when you do ‘ls’ in medley will change substantially as the Interlisp team continues to revise the system to make it run on several different machines.
+
+Step 11: Install the x11 apps
+
+Type “sudo apt install x11apps”
+
+On the screen, you will see a lot of loading, selecting and installing again .
+
+Up to this point, you have been creating the environment in which to run Medley Interlisp.
+You should have to do this only once. 
+
+RUNNING MEDLEY!!
+Several steps are required to run Medley. Make sure you are running your Linux distribution – Ubuntu 20.04 LTS or PengWin.
+
+Step 1: Initiate VcXsrv
+
+You can click on the icon on your desktop or you can run it from your Start Menu as an administrator.
+
+ 
+
+Note that VcXsrv is running under Windows, not under Ubuntu.
+
+You should see:
+
+ 
+
+You want to choose Multiple Windows, then click ‘Next’.
+You should then see:
+
+ 
+
+Select “Start no client’, then click ‘Next’.
+This allows you to run Medley Interlisp or other applications that use an X Server.
+You should then see:
+
+ 
+
+Do NOT check ‘Disable Access Control’!!
+Just click ‘Next’.
+You should now see:
+
+ 
+
+It is a good idea to save your configuration. It won’t let you save in Program Files/VcXsrv folder.
+I suggest putting it in your /Users/<username> folder.
+In my case, that is c:/users/skaisler. The file name is config.xlunch.
+
+When it is installed, an icon will appear in the system tray:
+ 
+
+And you will see it here:
+
+ 
+
+Step 2: Set your DISPLAY environment variable for X11
+
+Type this into your Ubuntu window.
+
+export DISPLAY=$(grep -m 1 nameserver /etc/resolv.conf  | awk ‘{print $2}’):0
+
+This takes the IP address of your host machine (conveniently used as a nameserver in your WSL Linux environment for DNS lookups) and sets it as the Display remote location (with :0 for the display number appended).
+
+To see if it works, let’s try xeyes:
+ xeyes &
+
+Check that it works:
+skaisler1@DESKTOP-xxxxx:~$ sudo xeyes &
+[1] 5952
+
+It creates a background process.
+To see the result, enter Alt-Tab on your keyboard and go to the system tray and select X at the bottom.
+The system tray:
+
+ 
+
+And, the xeyes display will pop up on your display:
+ 
+ 
+Once satisfied that it works, you can kill that process:
+skaisler1@DESKTOP-xxxxx:~$ sudo kill 5952
+[1]+  Terminated              sudo xeyes  (wd: ~)
+(wd now: ~/medley)
+
+Step 3: Run Medley
+
+NOTE: Now, you can run medley, but since you killed xeyes, you shutdown the X server, so:
+
+Click on VcXsrv again and check it appears in the system tray.
+Then, link the display to the server again via the export command.
+Note: you can place the export command in .bashrc file at your home directory.
+But, you will need to run source .bashrc
+
+Make sure you are in the Medley directory  in your home directory.
+
+To run Medley:
+skaisler1@DESKTOP-xxxx:~/medley$ sudo ./run-medley&
+[1] 6156
+skaisler1@DESKTOP-xxxxx:~/medley$ running: lde -g 1440x900 -sc 1440x900 -m 256  /home/steve/medley/loadups/full.sysout
+greet: /home/steve/medley/greetfiles/SIMPLE-INIT
+
+You should see a display that looks like this:
+
+ 
+	
+And, voila, you have a version of Interlisp running on Windows 10.
+
+Then, if you do ALT-TAB, and select X, you should see a window that had Interlisp running in it.
+
+ 
+
+Note: Additional Interlisp Notes will cover other aspects of running Medley.
