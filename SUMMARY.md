@@ -1,6 +1,6 @@
 # Table of contents
 
-* [210802 notes on organization goals](README.md)
+* [🌮 210802 notes on organization goals](README.md)
 * [Building-Maiko-and-Medley-with-GitHub-Actions](Building-Maiko-and-Medley-with-GitHub-Actions.md)
 * [Building](Building.md)
 * [Documentation](Documentation.md)
