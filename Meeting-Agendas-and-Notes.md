@@ -7,7 +7,7 @@ please add any agenda issues and other items you would like to discuss.
 ### Agenda 2 May 2022
 
 * Round-table (let's try starting with this)
-* [Open Source for Historical and Cultural communities](https://www.lyrasis.org/programs/Documents/ITAV_Interactive_Guidebook.pdf) -- walkthrough this and other [Educopia community resources](https://github.com/Interlisp/medley/wiki/Educopia-Community-Resources)
+* [Open Source for Historical and Cultural communities](https://www.lyrasis.org/programs/Documents/ITAV_Interactive_Guidebook.pdf) -- walkthrough this and other [Educopia community resources](Educopia-Community-Resources)
 
 ### Agenda 11 April 2022
 * notices to other organizations (S Kaisler)
@@ -23,11 +23,11 @@ Larry's out this week, but there was sentiment to meet anyway, so click the Edit
 
 ### Agenda 14 March 2022
 
-Let's go through [Documentation](https://github.com/Interlisp/medley/wiki/Documentation) as well as [open 'Documentation' issues](https://github.com/Interlisp/medley/issues?q=is%3Aopen+is%3Aissue+label%3Adocumentation) and prioritize. 
+Let's go through [Documentation](Documentation) as well as [open 'Documentation' issues](/Interlisp/medley/issues?q=is%3Aopen+is%3Aissue+label%3Adocumentation) and prioritize. 
 
 ### Agenda 7 March 2022
 * Issue review for release announcement
-   Let's quickly go through open [issues labeled 'online'](https://github.com/Interlisp/medley/issues?q=is%3Aopen+is%3Aissue+label%3Aonline) 
+   Let's quickly go through open [issues labeled 'online'](/Interlisp/medley/issues?q=is%3Aopen+is%3Aissue+label%3Aonline) 
    for a status update
 * SPN/Educopia consulting
 * GITFNS
@@ -36,10 +36,10 @@ Let's go through [Documentation](https://github.com/Interlisp/medley/wiki/Docume
 
 
 ### Agenda 28 Feb 2022
-* Issue [#707](https://github.com/Interlisp/medley/issues/707) online (what changes are needed before we announce?)
-   * Issue [#680](https://github.com/Interlisp/medley/issues/680) Branding (Medley vs. Interlisp vs. Medley Interlisp)
-* [PR #706 rmk22](https://github.com/Interlisp/medley/pull/706) GitFns new version and call for review
-* LispUsers cleanup (Issue [#7](https://github.com/Interlisp/medley/issues/7))
+* Issue [#707](/Interlisp/medley/issues/707) online (what changes are needed before we announce?)
+   * Issue [#680](/Interlisp/medley/issues/680) Branding (Medley vs. Interlisp vs. Medley Interlisp)
+* [PR #706 rmk22](/Interlisp/medley/pull/706) GitFns new version and call for review
+* LispUsers cleanup (Issue [#7](/Interlisp/medley/issues/7))
 * SPN announcement https://www.softwarepreservationnetwork.org/interlisp/
 * using keysyms vs. key numbers
 
@@ -50,7 +50,7 @@ Let's go through [Documentation](https://github.com/Interlisp/medley/wiki/Docume
   * GITFNS handling file moves
   * SPN and spreading the news
   * Branding and sponsors
-* [Pick an issue](https://github.com/Interlisp/medley/issues/4): using "pick-issue" we will pick an issue and work on it together.
+* [Pick an issue](/Interlisp/medley/issues/4): using "pick-issue" we will pick an issue and work on it together.
 If we can close the issue in 20 minutes, fine, but otherwise we will just write up what we learned.
 (later I'll extend pick-issue to pick Lispusers packages too).
 
@@ -61,7 +61,7 @@ Happy Valentine's day
 * idea: 15 minute demos of Medley features (for later scripting and re-recording)
 
 ### Agenda 7 Feb 2022
-* [Documentation](https://github.com/Interlisp/medley/wiki/Documentation) (link from [Interlisp.org](https://Interlisp.org)).
+* [Documentation](Documentation) (link from [Interlisp.org](https://Interlisp.org)).
 * Moving obsolete / broken / unfixible files out of medley repo
    Using [Lispusers Survey](https://docs.google.com/spreadsheets/d/1pn4UcS-9CgMLi_qeGZlOGGEusAKsNDKxz1XhLwQCgKw/edit#gid=0)
 ### Agenda 31 Jan 2022
@@ -71,12 +71,12 @@ Happy Valentine's day
 
 ### Agenda 24 Jan 2022
 
-* PR #646 [rmk15](https://github.com/Interlisp/medley/pull/646) changes and features
-* [actions, online, docker](https://github.com/Interlisp/medley/issues/628): recent changes
+* PR #646 [rmk15](/Interlisp/medley/pull/646) changes and features
+* [actions, online, docker](/Interlisp/medley/issues/628): recent changes
   
 ### Agenda 17 Jan 2022
 
-* [Monthly report for January](https://github.com/Interlisp/medley/wiki/Project-News)
+* [Monthly report for January](Project-News)
 * Announcement to Computer History groups (Steve) see [draft](https://docs.google.com/document/d/1v9EvgNKsPTGEQf_GwQIWReuiizgCmf4Z/edit)
 * Round-table status and plans
 
@@ -84,7 +84,7 @@ Happy Valentine's day
 ### Agenda 10 Jan 2022
 Three topics; half hour each.
 
-1. Joining SPN (as a member, a sponsor, or some other relation). See [SPN membership proposal](https://www.softwarepreservationnetwork.org/wp-content/uploads/2020/06/V5-May-28-SPN-Membership-Proposal-2021.pdf) and [here for context](https://github.com/Interlisp/medley/wiki/Possible-organizational-partners); 
+1. Joining SPN (as a member, a sponsor, or some other relation). See [SPN membership proposal](https://www.softwarepreservationnetwork.org/wp-content/uploads/2020/06/V5-May-28-SPN-Membership-Proposal-2021.pdf) and [here for context](Possible-organizational-partners); 
 with [Jessica Farrell](mailto:jess.farrell@educopia.org) and [Eric Kaltman](mailto:eric.kaltman@csuci.edu).
 2. Interlisp Online (hopefully Frank)
 3. New User Getting Started (Bill and Steve)
@@ -101,6 +101,6 @@ Happy New Year
   * Historian (bibliographer, Interlisp history)
   * Lawyer (software preservation, Open source)
 
-## [Meeting Agendas and Notes 2021](https://github.com/Interlisp/medley/wiki/Meeting-Agendas-and-Notes-2021)
+## [Meeting Agendas and Notes 2021](Meeting-Agendas-and-Notes-2021)
 
 

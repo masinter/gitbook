@@ -3,12 +3,12 @@ The list is grouped by location (and update method).
 
 Annotations 👀 please review;  🗝️ of historical interest; 🔥 recent
 
-### [Wiki](https://github.com/Interlisp/medley/wiki)
+### [Wiki](/Interlisp/medley/wiki)
 
 * 👀 Getting started documents, linked from the ➡️ right-hand sidebar
-* 🔥[Project News](https://github.com/Interlisp/medley/wiki/Project-News) updated periodically.
-* [Guest Book](https://github.com/Interlisp/medley/wiki/Guest-Book). Add your name and some things about you.
-* [Meeting Agendas and Notes](https://github.com/Interlisp/medley/wiki/Meeting-Agendas-and-Notes)
+* 🔥[Project News](Project-News) updated periodically.
+* [Guest Book](Guest-Book). Add your name and some things about you.
+* [Meeting Agendas and Notes](Meeting-Agendas-and-Notes)
 * Other docs.
 
 ### Web site [https://interlisp.org](https://interlisp.org)
@@ -28,7 +28,7 @@ The website also has (mainly older) documents in PDF and HTML:
 * 🗝️ [Sun User's Guide (1991)](https://interlisp.org/docs/SunUserGuide.pdf) and [converted to HTML](https://interlisp.org/SunUserGuide). 👀 May have introductory material about configuration. 
 * [Medley 1.0 Release Notes (1988)](https://interlisp.org/docs/Medley1.0ReleaseNotes.pdf)
 
-To change the website, update [the Interlisp GitHub Pages repo](https://github.com/interlisp/interlisp.github.io).
+To change the website, update [the Interlisp GitHub Pages repo](/interlisp/interlisp.github.io).
 
 
 Google Drive
@@ -45,15 +45,15 @@ Google Drive
 
 
 * The Medley repository 
-  * [Issues](https://github.com/Interlisp/medley/issues) and
-  * [Discussions](https://github.com/Interlisp/medley/discussions)
+  * [Issues](/Interlisp/medley/issues) and
+  * [Discussions](/Interlisp/medley/discussions)
 
 ### From Interlisp GitHub repositories
  
 * README files in the GitHub Interlisp repositories 
-  * [medley](https://github.com/Interlisp/medley/#readme) and 
-  * [maiko](https://github.com/Interlisp/maiko/#readme) READMEs.
-* The TEdit sources for some of the PDF documents in the web site are in the [medley repo 'docs' directory](https://github.com/interlisp/medley/blob/master/docs).
+  * [medley](/Interlisp/medley/#readme) and 
+  * [maiko](/Interlisp/maiko/#readme) READMEs.
+* The TEdit sources for some of the PDF documents in the web site are in the [medley repo 'docs' directory](/interlisp/medley/blob/master/docs).
 
 ### Google Docs
  
