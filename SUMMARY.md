@@ -9,7 +9,7 @@
 * [InterlispOrg-Inc](InterlispOrg-Inc.md)
 * [Introduction](Introduction.md)
 * [Meeting Agendas and Notes](<Meeting Agendas and Notes.md>)
-* [Meeting-Agendas-and-Notes-2021](Meeting-Agendas-and-Notes-2021.md)
+* [Meeting Agendas and Notes 2021](Meeting-Agendas-and-Notes-2021.md)
 * [Modern-Medley-Release-Notes](Modern-Medley-Release-Notes.md)
 * [In preparation Interlisp.org annual report](Ongoing-projects.md)
 * [Orientation](Orientation.md)
