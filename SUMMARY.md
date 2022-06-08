@@ -3,7 +3,7 @@
 * [21-08-02-notes-on-organization-goals](README.md)
 * [Building](Building.md)
 * [Documentation](Documentation.md)
-* [Educopia-Community-Resources](Educopia-Community-Resources.md)
+* [Educopia Community Resources](Educopia-Community-Resources.md)
 * [Introduce yourself](Guest-Book.md)
 * [Welcome to the Medley Interlisp Wiki!](Home.md)
 * [InterlispOrg-Inc](InterlispOrg-Inc.md)
